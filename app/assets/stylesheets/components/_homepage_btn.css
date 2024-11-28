@@ -1,3 +1,40 @@
 .home-page-btn-container {
-  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-page-btn-div {
+  background-color: black;
+  padding: 2rem;
+  margin: 0.5rem 0;
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Tablet view (768px and above) */
+@media (min-width: 768px) {
+  .home-page-btn-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .home-page-btn-div {
+    width: auto;
+    margin: 1rem;
+  }
+}
+
+/* Desktop view (1024px and above) */
+@media (min-width: 1024px) {
+  .home-page-btn-container {
+    justify-content: space-around;
+  }
+
+  .home-page-btn-div {
+    padding: 2.5rem;
+  }
 }
