@@ -1,25 +1,25 @@
 .home-page-btn-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
 }
 
-.home-page-btn-div {
+.home-page-btn {
   background-color: black;
   padding: 2rem;
   margin: 0.5rem 0;
   border-radius: 25px;
   color: white;
   display: flex;
-  width: 100%;
-  max-width: 300px;
+  text-decoration: none;
 }
 
 /* Tablet view (768px and above) */
 @media (min-width: 768px) {
   .home-page-btn-container {
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
   }
 
   .home-page-btn-div {
@@ -31,10 +31,12 @@
 /* Desktop view (1024px and above) */
 @media (min-width: 1024px) {
   .home-page-btn-container {
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
   }
 
-  .home-page-btn-div {
+  .home-page-btn {
     padding: 2.5rem;
   }
 }
