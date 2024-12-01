@@ -19,5 +19,4 @@
 
  /* components  */
  @import "~/stylesheets/components/_homepage_btn.css";
-
- 
+ @import "~/stylesheets/components/_homepage_slider.css";
