@@ -1,6 +1,8 @@
 .language-switch-container {
   justify-content: center;
   align-items: center;
+  display: flex;
+  margin-top: 6rem;
 }
 
 /* The switch - the box around the slider */
@@ -26,7 +28,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -38,13 +40,16 @@
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: rgb(178, 42, 42);
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-image: url('great-britain-flag.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 input:focus + .slider {
@@ -55,6 +60,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+  opacity: 0; /* Make the red circle disappear */
 }
 
 /* Rounded sliders */
