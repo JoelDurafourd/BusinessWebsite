@@ -28,4 +28,6 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  pages:
+    home:
+      home_welcome: "Welcome to my humble website, which service are you looking for?"

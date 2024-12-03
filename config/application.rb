@@ -25,9 +25,9 @@ module Jobusinesswebsite
     # config.eager_load_paths << Rails.root.join("extras")
 
     # Permitted locales available for the application
-    config.I18n.available_locales = [:en, :jp]
+    I18n.available_locales = [:en, :jp]
 
     # Set default locale to something other than :en
-    config.I18n.default_locale = :en
+    I18n.default_locale = :en
   end
 end
