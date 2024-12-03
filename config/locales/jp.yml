@@ -2,3 +2,5 @@ jp:
   pages:
     home:
       home_welcome: "どのサービスをお探しですか？"
+      home_language_btn: "Language Education"
+      home_programming_btn: "Websites and Programming"

@@ -31,3 +31,5 @@ en:
   pages:
     home:
       home_welcome: "Welcome to my humble website, which service are you looking for?"
+      home_language_btn: "Language Education"
+      home_programming_btn: "Websites and Programming"
