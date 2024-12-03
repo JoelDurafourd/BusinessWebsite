@@ -1,6 +1,6 @@
-<div class="language-switch-container">
-  <label class="switch">
-    <input type="checkbox">
+<div class="language-switch-container" data-controller="language-toggle">
+  <label class="switch" id="language-toggle">
+    <input type="checkbox" data-language-toggle-target="toggle">
     <span class="slider round"></span>
   </label>
 </div>
@@ -9,9 +9,9 @@
 
 <div class="home-page-btn-container">
 <div class="home-page-btn-div">
-<%= link_to t('.home_language_btn'), pages_language_learning_path, class: "home-page-btn", style: "background-image: url(#{asset_path('classroom-stockimage.jpg')});" %>
+<%= link_to t('.home_language_btn'), pages_language_learning_path(locale: I18n.locale), class: "home-page-btn", style: "background-image: url(#{asset_path('classroom-stockimage.jpg')});" %>
 </div>
 <div class="home-page-btn-div">
-<%= link_to t('.home_programming_btn'), pages_programming_services_path, class: "home-page-btn", style: "background-image: url(#{asset_path('coding-background-image.png')});" %>
+<%= link_to t('.home_programming_btn'), pages_programming_services_path(locale: I18n.locale), class: "home-page-btn", style: "background-image: url(#{asset_path('coding-background-image.png')});" %>
 </div>
 </div>

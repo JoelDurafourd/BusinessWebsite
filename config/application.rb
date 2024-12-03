@@ -24,10 +24,13 @@ module Jobusinesswebsite
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    # Where the I18n library should search for translation files
+    config.i18n.load_path += Dir[Rails.root.join("my", "locales", "*.{rb,yml}")]
+
     # Permitted locales available for the application
-    I18n.available_locales = [:en, :jp]
+    config.i18n.available_locales = [:en, :jp]
 
     # Set default locale to something other than :en
-    I18n.default_locale = :en
+    config.i18n.default_locale = :jp
   end
 end
