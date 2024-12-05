@@ -1,6 +1,6 @@
-body {
-  background-image: linear-gradient(#03648A, #02233D);
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+.welcome-message-container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,8 +1,9 @@
 .language-switch-container {
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   display: flex;
-  margin-top: 6rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
 }
 
 /* The switch - the box around the slider */
