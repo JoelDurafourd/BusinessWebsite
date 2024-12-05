@@ -9,11 +9,12 @@ export default class extends Controller {
 
     // Set the initial state of the toggle based on the current locale
     const url = new URL(window.location.href);
-    const lang = url.searchParams.get("locale");
-    console.log(lang)
+    const locale = window.location.pathname.split("/")[1];
+    console.log("Locale:", locale);
+    console.log("url:", url);
 
     // Default to Japanese if no locale is present
-    if (!lang || lang === "jp") {
+    if (locale === "jp") {
       this.toggleTarget.checked = false;
     } else {
       this.toggleTarget.checked = true;
@@ -21,14 +22,19 @@ export default class extends Controller {
   }
 
   toggleLanguage(event) {
+    console.log("I'm toggled!");
     // Determine the new locale based on the checkbox state
     const newLocale = this.toggleTarget.checked ? "en" : "jp";
+    console.log("Locale:", newLocale);
 
-    // Update the URL with the new locale
-    const url = new URL(window.location.href);
-    url.searchParams.set("locale", newLocale);
+    // Update the URL path with the new locale
+    const segments = window.location.pathname.split("/"); // Split the path into segments
+    console.log("segments:", segments);
+    segments[1] = newLocale; // Replace the first segment with the new locale
 
-    // Redirect to the updated URL
-    window.location.href = url.toString();
+    const newPath = segments.join("/"); // Rejoin the segments into a full path
+
+    // Redirect to the updated path, preserving any query string parameters
+    window.location.href = newPath + window.location.search;
   }
 }
